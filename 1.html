@@ -80,11 +80,13 @@
     window.addEventListener("DOMContentLoaded", ev => {
         const range = document.querySelector('[type="range"]');
         const div_input = document.querySelector('#inputDiv');
-        range.value = parseFloat(div_input.fontSize);
+        const styles = window.getComputedStyle(div_input);
+
+        range.value = parseFloat(styles.fontSize);
     });
 
     document.querySelector('[type="range"]').addEventListener('input', ev => {
-        document.querySelector('#inputDiv').textContent = ev.target.value;
+        document.querySelector('#inputDiv').style.fontSize = ev.target.value + "px";
     });
 
 

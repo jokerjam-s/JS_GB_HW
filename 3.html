@@ -25,7 +25,13 @@
    * параметр "n"
    */
   function descendingOrder(n) {
+    if (typeof (n) === 'number'){
+      const dig_arr = Array.from(n.toString());
+      dig_arr.sort().reverse();
 
+      return parseInt(dig_arr.join(''))
+    }
+    return NaN;
   }
 
   console.log(descendingOrder(42145)); // 54421
