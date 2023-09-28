@@ -55,7 +55,7 @@
             <div>Цена: <span>${this.price}</span> р.</div>
             <a href="https://example.com/producs/${this.id}">Подробнее</a>
         </div>
-      `.replaceAll('\n', '');
+      `;
     }
   }
 
@@ -82,11 +82,14 @@
     if (!event.target.classList.contains('menuButton')) {
       return;
     }
-    const prods_html = products[event.target.dataset.type]
+    productsEl.innerHTML = products[event.target.dataset.type]
             .map(product => product.getProductMarkup())
-            .toString().replaceAll(',', '');
-
-    productsEl.innerHTML = prods_html;
+            .toString();
+    productsEl.childNodes.forEach(node => {
+      if(node.nodeName === '#text'){
+        node.remove();
+      }
+    })
   });
 
 </script>
