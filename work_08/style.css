@@ -709,3 +709,12 @@ body {
         margin-top: 40px;
     }
 }
+
+#basketInfo{
+    position: absolute;
+    background-color: blanchedalmond;
+    border: #222222 solid 1px;
+    border-radius: 15px;
+    min-width: 300px;
+    max-width: 500px;
+}
