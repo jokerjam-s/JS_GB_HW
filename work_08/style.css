@@ -711,10 +711,25 @@ body {
 }
 
 #basketInfo{
+    display: none;
     position: absolute;
-    background-color: blanchedalmond;
+    background-color: whitesmoke;
     border: #222222 solid 1px;
-    border-radius: 15px;
+    border-radius: 5px;
     min-width: 300px;
     max-width: 500px;
+    right: 50px;
+    top: 50px;
+}
+
+#basketItems, #basketTotal, #basketHeader{
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    padding: 5px;
+    font-size: small;
+}
+
+#basketHeader{
+    font-size: x-small;
+    font-weight: bold;
 }

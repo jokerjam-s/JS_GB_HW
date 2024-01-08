@@ -1,8 +1,14 @@
 'use strict';
+import {Basket, BasketItem} from "./basket";
+
+let basket = new Basket();
 
 let fitlerPopup = document.querySelector('.filterPopup');
 let fitlerLabel = document.querySelector('.filterLabel');
 let filterIcon = document.querySelector('.filterIcon');
+
+let things = document.querySelectorAll('.featuredItem');
+
 
 fitlerLabel.addEventListener('click', function() {
     fitlerPopup.classList.toggle('hidden');
