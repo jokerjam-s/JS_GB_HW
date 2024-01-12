@@ -9,6 +9,11 @@ let filterIcon = document.querySelector('.filterIcon');
 
 let things = document.querySelectorAll('.featuredItem');
 
+for (const thing of things) {
+    thing.addEventListener('click', function(){
+       basket.addItem(new BasketItem(''))
+    });
+}
 
 fitlerLabel.addEventListener('click', function() {
     fitlerPopup.classList.toggle('hidden');

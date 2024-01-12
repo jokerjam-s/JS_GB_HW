@@ -415,6 +415,7 @@ body {
 }
 
 .featuredImgDark button {
+    cursor: pointer;
     background: none;
     border: 1px solid white;
     color: white;
@@ -708,6 +709,10 @@ body {
     .footerRight {
         margin-top: 40px;
     }
+}
+
+#basket {
+    cursor: pointer;
 }
 
 #basketInfo{
