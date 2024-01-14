@@ -1,19 +1,16 @@
+import {
+    Basket,
+    BasketItem
+} from "./basket.js";
+
 'use strict';
-import {Basket, BasketItem} from "./basket";
+
 
 let basket = new Basket();
 
 let fitlerPopup = document.querySelector('.filterPopup');
 let fitlerLabel = document.querySelector('.filterLabel');
 let filterIcon = document.querySelector('.filterIcon');
-
-let things = document.querySelectorAll('.featuredItem');
-
-for (const thing of things) {
-    thing.addEventListener('click', function(){
-       basket.addItem(new BasketItem(''))
-    });
-}
 
 fitlerLabel.addEventListener('click', function() {
     fitlerPopup.classList.toggle('hidden');
@@ -38,4 +35,16 @@ let filterSizes = document.querySelector('.filterSizes');
 let filterSizeWrap = document.querySelector('.filterSizeWrap');
 filterSizeWrap.addEventListener('click', function() {
     filterSizes.classList.toggle('hidden');
+});
+
+
+// отображение, обработка данных в корзине
+let things = document.querySelectorAll('.featuredItem');
+
+things.forEach(function (thing){
+    thing.addEventListener('click', function(e){
+        if(e.target.tagName === 'BUTTON')
+            alert('dfsfsdf!!! ');
+        //basket.addItem(new BasketItem(''))
+    })
 });

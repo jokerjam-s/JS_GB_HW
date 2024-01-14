@@ -26,8 +26,8 @@ export class Basket {
         this.items = [];
     }
 
-    addItem(item: BasketItem) {
-        const thing: BasketItem = this.items.find(thing => thing.name === item.name);
+    addItem(item) {
+        let thing = this.items.find(thing => thing.name === item.name);
 
         if (thing === undefined) {
             this.items.push(item);
